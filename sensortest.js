@@ -4,16 +4,9 @@
 // högskola, ht 2026. Fungerar på micro:bit v1 och v2.
 //
 // SYFTE: se ett sensorvärde ändra sig, först på kortets egna 25 lysdioder
-// och sedan som siffror och graf i MakeCodes egen konsol. Fortfarande
-// ingen p5, ingen Live Server, ingen Web Serial.
+// och sedan som siffror och graf i MakeCodes egen konsol.
 //
-// Så här ser du konsolen i MakeCode:
-//   Simulatorn: kör programmet, så dyker "Visa konsol Simulator" upp
-//   Kortet:     tryck Anslut (Connect device) först, därefter
-//               "Visa konsol Enhet" / "Show console Device"
-//
-// MakeCode ritar automatiskt en graf över värdena. Det räcker långt innan
-// vi tar in p5.
+// MakeCode ritar automatiskt en graf över värdena.
 
 // ---- PARAMETRAR ----------------------------------------------------
 const VAL = 1    // 1 = ljus, 2 = lutning, 3 = rörelse
