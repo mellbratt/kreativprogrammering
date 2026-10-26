@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Byggrester och nedladdade kortfiler
+node_modules/
+*.hex

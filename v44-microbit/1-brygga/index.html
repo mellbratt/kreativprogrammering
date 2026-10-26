@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<title>v44-1 — Bryggan</title>
+
+<!-- Allt skissen behöver ligger i den HÄR mappen. Det är med flit:
+     då fungerar den oavsett vilken mapp du råkat öppna i VS Code,
+     och du kan flytta mappen vart du vill. -->
+<script src="p5.min.js"></script>
+<script src="microbit.js"></script>
+
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { display: grid; place-items: center; background: #0E1014; }
+  canvas { box-shadow: 0 2px 24px rgba(0,0,0,0.5); }
+  button { font-family: ui-sans-serif, system-ui, sans-serif; }
+  #fel {
+    max-width: 44rem; padding: 2rem; color: #E8E9EC;
+    font: 16px/1.6 ui-sans-serif, system-ui, sans-serif;
+  }
+  #fel code { background: #1E2228; padding: 1px 5px; border-radius: 4px; }
+  #fel b { color: #E8613C; }
+</style>
+</head>
+<body>
+  <script src="sketch.js"></script>
+
+  <!-- Säger rakt ut vad som är fel i stället för att visa en svart ruta. -->
+  <script>
+  addEventListener('load', function () {
+    if (typeof p5 !== 'undefined') return;
+    var d = document.createElement('div');
+    d.id = 'fel';
+    d.innerHTML = location.protocol === 'file:'
+      ? '<p><b>Sidan kördes som file://</b></p><p>Högerklicka på <code>index.html</code> i VS Code och välj <i>Open with Live Server</i>. Adressen ska börja med <code>localhost</code> eller <code>127.0.0.1</code>. Webbläsaren släpper inte in serieporten på en fil som öppnats direkt.</p>'
+      : '<p><b>p5.min.js kunde inte laddas</b></p><p>Filen ska ligga i samma mapp som <code>index.html</code>. Saknas den, hämta mappen igen från kurswebben.</p>';
+    document.body.appendChild(d);
+  });
+  </script>
+</body>
+</html>
